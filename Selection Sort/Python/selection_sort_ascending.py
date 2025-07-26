@@ -14,7 +14,8 @@ def selection_sort(nums) : #Selection sort Method
 #Taking input for list size
 n=int(input("Enter the size of the list:"))
 nums=[] #Decleare the list 
-print(f"Enter {n} numbers:")#Taking list input
+print(f"Enter {n} numbers:")# f string
+#Taking list input 
 for _ in range(n):#_ don't care variable
     num=int(input())
     nums.append(num) #In append mode take one input and add it one by one to the list
