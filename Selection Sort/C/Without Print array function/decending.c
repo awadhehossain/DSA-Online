@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 //Slection sort
-void slection_sort(int arr[],int n)
+void selection_sort(int arr[],int n)
 {
     for(int i=0;i<n-1;i++)
     {
@@ -30,7 +30,7 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    slection_sort(arr,n);
+    selection_sort(arr,n);
     for(int i=0;i<n;i++)
     {
         printf("%d ",arr[i]);

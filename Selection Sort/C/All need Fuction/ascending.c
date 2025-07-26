@@ -8,20 +8,20 @@ void swap(int *x,int *y)
     *y=temp;
 }
 
-//Slection sort
-void slection_sort(int arr[],int n)
+//Selection sort
+void selection_sort(int arr[],int n)
 {
     for(int i=0;i<n-1;i++)
     {
-        int largest=i;
+        int smallest=i;
         for(int j=i+1;j<n;j++)
         {
-            if(arr[j]>arr[largest])
+            if(arr[j]<arr[smallest])
             {
-                largest=j;
+                smallest=j;
             }
         }
-        swap(&arr[i],&arr[largest]);
+        swap(&arr[i],&arr[smallest]);
     }
 }
 
@@ -45,7 +45,7 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    slection_sort(arr,n);
+    selection_sort(arr,n);
     printarray(arr,n);
     return 0;
     

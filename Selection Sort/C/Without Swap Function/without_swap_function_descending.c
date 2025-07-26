@@ -1,14 +1,14 @@
 #include<stdio.h>
 
-//Slection sort
-void slection_sort(int arr[],int n)
+//Selection sort
+void selection_sort(int arr[],int n)
 {
     for(int i=0;i<n-1;i++)
     {
         int smallest=i;
         for(int j=i+1;j<n;j++)
         {
-            if(arr[j]<arr[smallest])
+            if(arr[j]>arr[smallest])
             {
                 smallest=j;
             }
@@ -16,6 +16,15 @@ void slection_sort(int arr[],int n)
         int temp=arr[i];
         arr[i]=arr[smallest];
         arr[smallest]=temp;
+    }
+}
+
+//FOr printing the array
+void printarray(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
     }
 }
 
@@ -30,11 +39,8 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    slection_sort(arr,n);
-    for(int i=0;i<n;i++)
-    {
-        printf("%d ",arr[i]);
-    }
+    selection_sort(arr,n);
+    printarray(arr,n);
     return 0;
     
 }

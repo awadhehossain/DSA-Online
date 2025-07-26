@@ -1,15 +1,7 @@
 #include<stdio.h>
 
-//For swaping the value 
-void swap(int *x,int *y)
-{
-    int temp=*x;
-    *x=*y;
-    *y=temp;
-}
-
-//Slection sort
-void slection_sort(int arr[],int n)
+//Selection sort
+void selection_sort(int arr[],int n)
 {
     for(int i=0;i<n-1;i++)
     {
@@ -21,7 +13,9 @@ void slection_sort(int arr[],int n)
                 smallest=j;
             }
         }
-        swap(&arr[i],&arr[smallest]);
+        int temp=arr[i];
+        arr[i]=arr[smallest];
+        arr[smallest]=temp;
     }
 }
 
@@ -45,7 +39,7 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    slection_sort(arr,n);
+    selection_sort(arr,n);
     printarray(arr,n);
     return 0;
     
