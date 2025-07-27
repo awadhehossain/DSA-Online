@@ -25,7 +25,7 @@ void selection_sort(int arr[],int n)
     }
 }
 
-//FOr printing the array
+//For printing the array
 void printarray(int arr[],int n)
 {
     for(int i=0;i<n;i++)
