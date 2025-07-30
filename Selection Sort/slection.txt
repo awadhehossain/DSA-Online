@@ -1,1 +1,1 @@
-Sorted from first to last finding smallest and largest value
+Sorted from left to right finding smallest or largest value
