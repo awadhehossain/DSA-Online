@@ -7,7 +7,7 @@ void swap(int *x,int *y)
     *x=*y;
     *y=temp;
 }
-
+int count=0;
 //Selection sort
 void selection_sort(int arr[],int n)
 {
@@ -21,7 +21,12 @@ void selection_sort(int arr[],int n)
                 smallest=j;
             }
         }
-        swap(&arr[i],&arr[smallest]);
+        if(smallest!=i)
+        {
+            count++;
+             swap(&arr[i],&arr[smallest]);
+        }
+       
     }
 }
 
@@ -46,6 +51,7 @@ int main()
         scanf("%d",&arr[i]);
     }
     selection_sort(arr,n);
+    printf("Swap Count:%d\n",count);
     printarray(arr,n);
     return 0;
     
